@@ -25,25 +25,25 @@ On the topic of cost, Microsoft has two deployment options that use different pr
 Functions are defined by directories hosted under the Function App's application root, where the directory name represents the function name, and the function's internals are defined by the following file structure:
 
 * FunctionName - the directory name will also be the Function's name in the Azure portal
-    * function.json - this file defines the Function trigger and binding(s) (more details to follow)
-    * run.csx - since I'm using C# in my implementation, this is the C# Script definition of my function's code -- your Function could alternatively use Ruby, Node, PowerShell, F#, depending on your preference and skill set. A C# Script requires that I include a public static Run method that takes the trigger and binding(s) as parameters. At the moment, C# Scripts don't support Intellisense -- this is something on their roadmap
+    * `function.json` - this file defines the Function trigger and binding(s) (more details to follow)
+    * `run.csx` - since I'm using C# in my implementation, this is the C# Script definition of my function's code - your Function could alternatively use Ruby, Node, PowerShell, F#, depending on your preference and skill set. A C# Script requires that I include a public static Run method that takes the trigger and binding(s) as parameters. At the moment, C# Scripts don't support Intellisense - this is something on their roadmap
 
-A Function's definition, managed by a function.json file in its directory, has three primary concepts:
+A Function's definition, managed by a `function.json` file in its directory, has three primary concepts:
 
 * Trigger - triggers are what cause Functions to execute. These are most commonly HTTP (requests and webhooks), Timers (chron jobs) and queues (Storage and Service Bus), but include several other options
-* Input Binding (optional) - triggers can pass in identifiers that can be used to query data from storage components. For example, the route /functionName/{id} paired with a Table Storage input binding will pass the matching strongly-typed table record into the function
+* Input Binding (optional) - triggers can pass in identifiers that can be used to query data from storage components. For example, the route `/functionName/{id}` paired with a Table Storage input binding will pass the matching strongly-typed table record into the function
 * Output Binding - these are references to storage components as output of your Function. An example would be Table Storage, where the Function would store the trigger's data to a database. You can pass in multiple output bindings, and since they are being passed in by reference, any items added to these outputs are automatically sent to the corresponding bound resource without including them in the return statement of the function
 
-For more details on triggers and bindings, check out the developer reference: https://azure.microsoft.com/en-us/documentation/articles/functions-triggers-bindings/
+For more details on triggers and bindings, check out the developer reference: [https://azure.microsoft.com/en-us/documentation/articles/functions-triggers-bindings/](https://azure.microsoft.com/en-us/documentation/articles/functions-triggers-bindings/)
 
 ### A real life implementation example
 My journey into Azure Functions has been mostly comprised of refactoring my existing webstore fulfillment app away from WebJobs and into Functions. It is admittedly overengineered based on current sales traffic, but Functions at low scale are so inexpensive that it ended up being a good opportunity to implement some new features. Here is my updated conceptual solution architecture using Functions instead of WebJobs:
 
-![_config.yml]({{ site.baseurl }}/images/2016-11-12-achieving-enterprise-scale-with-azure-functions/fns-architeture-3.jpg)
+![_config.yml]({{ site.baseurl }}/images/2016-11-12-achieving-enterprise-scale-with-azure-functions/fns-architecture-3.jpg)
 
 Apart from being massively scalable, this architecture allows each Function to do one simple thing that it's very good at and nothing more -- helping manage cognitive load by ensuring that the developer is working only on one thing at a time.
 
-For error handling, I pass three queues into most of my Functions as outputs, [queue-name], [queue-name]-error and my email queue. If something goes wrong, store the message in a separate error queue so that I don't lose access to the raw message -- also, there's no reason later on that I couldn't create resiliency Functions to drive reprocessing of failed messages in certain cases. On top of that, I send myself an email using my email queue and Function to alert myself to go take a look to investigate. The monitoring functionality in the Functions UX is solid and captures plenty of information useful in debugging.
+For error handling, I pass three queues into most of my Functions as outputs, `[queue-name]`, `[queue-name]-error` and my email queue. If something goes wrong, store the message in a separate error queue so that I don't lose access to the raw message - also, there's no reason later on that I couldn't create resiliency Functions to drive reprocessing of failed messages in certain cases. On top of that, I send myself an email using my email queue and Function to alert myself to go take a look to investigate. The monitoring functionality in the Functions UX is solid and captures plenty of information useful in debugging.
 
 Based on my use cases, I split out the Functions into two applications. The PollAmazon Function runs every 10 minutes and has no reason to scale, so I decided to host that on my existing App Service where I'm already hosting their public website as a Web App. Alternatively, the order handling Functions should be autoscaling, so they are hosted in a Dynamic App Service plan.
 
