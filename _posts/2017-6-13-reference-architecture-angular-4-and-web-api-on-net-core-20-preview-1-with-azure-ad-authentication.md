@@ -9,7 +9,7 @@ The more time I spend in the tech community and market these days, the more it h
 
 Reference Github repository: https://github.com/brbarnett/dot-net-core-spa (read the solution readme for setup/deployment details)
 
-I am assuming you have read my [post on hosting Angular 4 apps in .NET Core](/hosting-angular-4-in-a-net-core-20-preview-1-application/): 
+I am assuming you have read my [post on hosting Angular 4 apps in .NET Core]({{ site.baseurl }}/hosting-angular-4-in-a-net-core-20-preview-1-application/): 
 
 ### High-level architecture
 The solution is based on two primary web-hosted projects: an Angular 4 SPA and a second Web API project. These applications are built to be hosted separately to promote scalability and deployment independence. The Client/Web application communicates with the API application via CORS across domains. Authentication is handled by the Angular application, which passes a bearer token to the API application to be validate against Azure AD. It looks something like this:
