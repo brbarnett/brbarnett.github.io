@@ -42,6 +42,6 @@ FROM nginx:alpine
 COPY nginx.conf /etc/nginx/nginx.conf
 ```
 
-That is about as thin as it gets - more instructions on how to test this solution out here: https://github.com/brbarnett/much-todo-about-containers
+That is about as thin as it gets - more instructions on how to test this solution out here: [https://github.com/brbarnett/much-todo-about-containers](https://github.com/brbarnett/much-todo-about-containers)
 
 I'll talk more about Kubernetes in a future post as well, where we'll use ingress rules instead of a custom nginx configuration.

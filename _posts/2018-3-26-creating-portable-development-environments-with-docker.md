@@ -12,12 +12,12 @@ This flexibility comes with a cost: when your job is to develop and/or maintain 
 Enter: [Docker](https://www.docker.com/). Docker allows you to manage OS and framework versions within images, and those images run in containers that are completely independent of each other and the host OS. What that means for you is that you can run a Node 6.x container next to a Node 8.10.0 (current LTS) without needing to even install Node on your host. I'm going to show you not only how to load your code into containers that support specific frameworks, but also how to connect those containers to your host's file system to allow hot reload -- meaning, whenever you update the code on your file system, the container automatically restarts with the latest version. How cool is that??
 
 ### Prerequisites
-I am going to assume that you have a grasp on the fundamentals of containers, have at least explored Docker and understand some of Docker's basic CLI commands. If you're interested in learning more about Docker, I highly recommend going through a few of [Nigel Poulton](https://twitter.com/nigelpoulton)'s Pluralsight courses: http://blog.nigelpoulton.com/training-videos/
+I am going to assume that you have a grasp on the fundamentals of containers, have at least explored Docker and understand some of Docker's basic CLI commands. If you're interested in learning more about Docker, I highly recommend going through a few of [Nigel Poulton](https://twitter.com/nigelpoulton)'s Pluralsight courses: [http://blog.nigelpoulton.com/training-videos/](http://blog.nigelpoulton.com/training-videos/)
 
 At the time of writing, I'm using Docker version 17.12.0-ce on my Mac (though the platform doesn't matter). Please [install Docker](https://docs.docker.com/install/#supported-platforms) if you would like to follow along!
 
 ### The demo
-This demo includes both Node.js and ASP.NET Core projects which we can run side-by-side, and I've hooked them both up to some file watchers to allow hot reload. The base repository/branch and Docker Compose file for this demo can be found here: https://github.com/brbarnett/hello-docker/blob/mount-hot-reload/docker-compose.yml
+This demo includes both Node.js and ASP.NET Core projects which we can run side-by-side, and I've hooked them both up to some file watchers to allow hot reload. The base repository/branch and Docker Compose file for this demo can be found here: [https://github.com/brbarnett/hello-docker/blob/mount-hot-reload/docker-compose.yml](https://github.com/brbarnett/hello-docker/blob/mount-hot-reload/docker-compose.yml)
 
 I've done a few important things here:
 
@@ -115,8 +115,9 @@ sudo docker-compose up -d
 
 It will take a few minutes once you run `docker-compose up` because Docker is downloading images from DockerHub in order to run them as the base images for your two containers. Check out your running containers by running the `docker ps` command. Also, you're now able to see the two services exposed at the following URLs:
 
-http://hello-docker-dns.northcentralus.cloudapp.azure.com:8080/
-http://hello-docker-dns.northcentralus.cloudapp.azure.com:8081/api/values
+[http://hello-docker-dns.northcentralus.cloudapp.azure.com:8080/](http://hello-docker-dns.northcentralus.cloudapp.azure.com:8080/)
+
+[http://hello-docker-dns.northcentralus.cloudapp.azure.com:8081/api/values](http://hello-docker-dns.northcentralus.cloudapp.azure.com:8081/api/values)
 
 Important note, and I can't make this point enough: notice that I didn't install Node.js or dotnet on the Linux VM. This is what makes the environment portable, in that the environment is totally self-contained and independent of your host.
 
