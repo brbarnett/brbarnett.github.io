@@ -78,7 +78,7 @@ Now for the WebJob: to set this up, head to Visual Studio and Add New Project > 
 
 This will give you essentially an Azure deployment-enabled console app that has two main components:
 
-* Program.cs - this contains minimal code that quickly configures the WebJob, and then runs a RunAndBlock() method that keeps the WebJob running continuously, listening for events that are defined in the Functions.cs file. Note: this supports Dependency Injection - just add this to your JobHost config (assuming you use Unity): 
+* Program.cs - this contains minimal code that quickly configures the WebJob, and then runs a `RunAndBlock()` method that keeps the WebJob running continuously, listening for events that are defined in the Functions.cs file. Note: this supports Dependency Injection - just add this to your JobHost config (assuming you use Unity): 
 ```
 var config = new JobHostConfiguration { JobActivator = new JobActivator(UnityConfig.GetConfiguredContainer()) };
 var host = new JobHost(config);
