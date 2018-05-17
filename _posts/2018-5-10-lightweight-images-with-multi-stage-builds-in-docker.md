@@ -33,7 +33,7 @@ CMD node app.js
 
 I tried building the image from the first 4 lines, then from the entire Dockerfile. Here's the difference in image size between stages:
 
-![_config.yml]({{ site.baseurl }}/images/2018-5-10-lightweight-images-with-multi-stage-builds-in-docker\multi-stage-images.jpg)
+![_config.yml]({{ site.baseurl }}/images/2018-5-10-lightweight-images-with-multi-stage-builds-in-docker/multi-stage-images.jpg)
 
 That is a substantial size difference between the two images, mostly because the `node:8.11.1` base image is 672MB while the `alpine:latest` image is only 4.15MB. It's always a good idea to use the slimmest responsible base image for production workloads.
 
