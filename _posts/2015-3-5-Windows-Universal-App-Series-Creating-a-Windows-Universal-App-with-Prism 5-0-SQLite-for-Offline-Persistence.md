@@ -11,7 +11,7 @@ Since the Windows Mobile OS, Microsoft has gone through a few iterations of 7.X 
 ### The Windows Universal Apps Architecture
 Creating a "Store Apps" project automatically generates three grouped projects: ones for Windows 8.1, Windows Phone 8.1 and a common Shared library, which ends up working together something like this:
 
-![_config.yml]({{ site.baseurl }}/images/2015-3-3-Windows-Universal-App-Series-Creating-a-Windows-Universal-App-with-Prism 5-0-SQLite-for-Offline-Persistence/wua1.png)
+![_config.yml]({{ site.baseurl }}/images/2015-3-5-Windows-Universal-App-Series-Creating-a-Windows-Universal-App-with-Prism 5-0-SQLite-for-Offline-Persistence/wua1.png)
 
 The architecture here lends itself very well to the MVVM pattern, where the platform-specific projects serve as repositories for Views and Controls (think Barcode Scanner, possibly only available on a phone), and the Shared library houses their common Controls and ViewModels that are a loosely-coupled version of what would otherwise be consumption and orchestration of service and command calls in code-behinds (see: Smart UI anti-pattern). While we're at it, it's a good idea to abstract all of the application-specific functionality into an application layer, and inject its services as dependencies (via an IoC container like Unity) into your ViewModels.
 
