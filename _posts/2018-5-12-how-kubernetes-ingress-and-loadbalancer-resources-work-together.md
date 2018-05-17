@@ -2,7 +2,7 @@
 layout: post
 title: How Kubernetes Ingress and LoadBalancer resources work together
 redirect_from: "/blog/2018/05/how-kubernetes-ingress-and-loadbalancer-resources-work-together/"
-tags: kubernetes ingress nginx azure-aks azure
+tags: kubernetes,ingress,nginx,azure aks,azure
 ---
 
 In a [previous post](/creating-a-simple-reverse-proxy-for-docker-swarm/), I showed you how to create a reverse proxy container image for use in a Docker Swarm. If you're using Kubernetes, you will still use a similar service for ingress (in that you use something like an nginx reverse proxy) but the nomenclature and how it glues together is a bit different. I'll go into some specifics with some example resources and how they work in [Azure AKS](https://docs.microsoft.com/en-us/azure/aks/).
