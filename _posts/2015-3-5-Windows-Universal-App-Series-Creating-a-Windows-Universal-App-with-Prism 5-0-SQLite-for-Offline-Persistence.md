@@ -109,7 +109,7 @@ public sealed partial class App: MvvmAppBase
 }
 ```
 
-That's the entire App.xaml.cs. Compare with the stock, and you can see why Prism is a favorite among Universal App developers. For example, it allows navigation with a simple call to this.NavigationService.Navigate("Main", null), which will bring up your MainPage.xaml on the device. **IMPORTANT: Make special note that I have registered NavigationService (a singleton of INavigationService) with Unity, so I can inject the INavigationService dependency directly into my ViewModels. You otherwise lose access to this NavigationService in your ViewModels, which is crucial to navigating between pages of your app.**
+That's the entire App.xaml.cs. Compare with the stock, and you can see why Prism is a favorite among Universal App developers. For example, it allows navigation with a simple call to `this.NavigationService.Navigate("Main", null)`, which will bring up your MainPage.xaml on the device. **IMPORTANT: Make special note that I have registered NavigationService (a singleton of INavigationService) with Unity, so I can inject the INavigationService dependency directly into my ViewModels. You otherwise lose access to this NavigationService in your ViewModels, which is crucial to navigating between pages of your app.**
 
 ### Creating Your First Pages
 Let's get started and actually create a few pages (one main one, and a second to provide a navigation example). Create a page called MainPage.xaml in the WP8.1 project, which will automatically generate a partial in the background. Quick note: to make the same page work on the desktop/tablet, you'll need to create a View with the same name in the Windows 8.1 project, but you can share the ViewModel. Here is some basic XAML:
