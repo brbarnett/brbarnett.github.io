@@ -51,7 +51,7 @@ public static IApplicationBuilder UseAngularRouting(this IApplicationBuilder app
 }
 ```
 
-Credit: http://benjii.me/2016/01/angular2-routing-with-asp-net-core-1/
+Credit: [http://benjii.me/2016/01/angular2-routing-with-asp-net-core-1/](http://benjii.me/2016/01/angular2-routing-with-asp-net-core-1/)
 
 Usage is the following within `Startup.cs`:
 
