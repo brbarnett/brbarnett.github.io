@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+I am the App Dev Director and Sr Solution Architect at Rightpoint in Chicago, IL, specializing in enterprise architecture and building .NET applications & workflows enabled by Azure. This is my blog.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[bbarnett@rightpoint.com](mailto:bbarnett@rightpoint.com)
