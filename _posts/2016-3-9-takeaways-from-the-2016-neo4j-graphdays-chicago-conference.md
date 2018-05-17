@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Takeaways from the 2016 Neo4j GraphDays:: Chicago Conference
+title: Takeaways from the 2016 Neo4j GraphDays&colon; Chicago Conference
 redirect_from: "/blog/2016/03/takeaways-from-the-2016-neo4j-graphdays-chicago-conference/"
 ---
 
