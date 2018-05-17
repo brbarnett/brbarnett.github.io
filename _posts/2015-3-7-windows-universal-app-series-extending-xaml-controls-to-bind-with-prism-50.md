@@ -10,9 +10,9 @@ While I was completing a project for a client of mine, I was working with a List
 
 Previous posts in this series:
 
-[Windows Universal App Series – Creating a Windows Universal App with Prism 5.0 & SQLite for Offline Persistence](/windows-universal-app-series-creating-a-windows-universal-app-with-prism-50-sqlite-for-offline-persistence/)
+[Windows Universal App Series – Creating a Windows Universal App with Prism 5.0 & SQLite for Offline Persistence]({{ site.baseurl }}/blog/2015/03/windows-universal-app-series-creating-a-windows-universal-app-with-prism-50-sqlite-for-offline-persistence/)
 
-[Windows Universal App Series – Implementing the CQRS Pattern with a Segregated Data Model to Persist & Sync Offline Data to Azure DB via Azure Mobile Services](/windows-universal-app-series-implementing-the-cqrs-pattern-with-a-segregated-data-model-to-persist-sync-offline-data-to-azure-db-via-azure-mobile-services/)
+[Windows Universal App Series – Implementing the CQRS Pattern with a Segregated Data Model to Persist & Sync Offline Data to Azure DB via Azure Mobile Services]({{ site.baseurl }}/blog/2015/03/windows-universal-app-series-implementing-the-cqrs-pattern-with-a-segregated-data-model-to-persist-sync-offline-data-to-azure-db-via-azure-mobile-services/)
 
 ### Hooking up the View and ViewModel by way of DelegateCommand Binding
 The idea is that we want to set up a mechanism for adding a handler specifically to the ListView’s SelectionChanged event, without adding any additional code to a View’s code-behind. Since the SelectionChanged XAML property only accepts a string that’s meant to refer directly to a handler in the View’s code-behind, this is a problem. So how do we hook this up?
