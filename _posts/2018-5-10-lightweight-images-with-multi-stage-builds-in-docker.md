@@ -2,6 +2,7 @@
 layout: post
 title: Lightweight images with multi-stage builds in Docker
 redirect_from: "/blog/2018/05/lightweight-images-with-multi-stage-builds-in-docker/"
+tags: docker
 ---
 
 Size matters. When you're shipping code in containers, it's important to remember that your container images are pulled on every node within your Swarm or Kubernetes clusters. This means that as you scale out your cluster nodes or schedule workloads on new nodes in your cluster, the size of your image becomes non-trivial for cold start time.

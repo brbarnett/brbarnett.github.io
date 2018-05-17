@@ -2,6 +2,7 @@
 layout: post
 title: Dev standards&colon; Source control guidelines
 redirect_from: "/blog/2017/11/dev-standards-source-control-guidelines/"
+tags: vsts git source-control
 ---
 
 As technology companies continue to grow and project teams expand to deliver larger projects, it is important to reflect and make sure your organization's foundation skills are strong. By no means would I say that learning Git will solve all of your problems, but I think it is fair to say that there are a few basic guidelines out there that keep your projects hovering at least closer to the "pit of success."

@@ -2,6 +2,7 @@
 layout: post
 title: Creating portable development environments with Docker
 redirect_from: "/blog/2018/03/creating-portable-development-environments-with-docker/"
+tags: docker
 ---
 
 The rate of change in software development tools has never been faster, which has allowed developers to continue to demand increased flexibility in how they deliver. Gone are the days of an entire development team sharing consistent hardware (PC vs Mac), and I have seen a massive uptick in once-Windows-only devs moving to MacOS. Enabling this change are the framework giants like Microsoft, who have been moving toward OS-agnostic frameworks - for example, .NET Core running on Windows, MacOS and Linux.

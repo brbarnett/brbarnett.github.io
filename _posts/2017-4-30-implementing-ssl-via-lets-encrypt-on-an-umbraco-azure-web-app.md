@@ -2,6 +2,7 @@
 layout: post
 title: Implementing SSL via Let's Encrypt on an Umbraco Azure Web App
 redirect_from: "/blog/2017/04/implementing-ssl-via-lets-encrypt-on-an-umbraco-azure-web-app/"
+tags: azure tls lets-encrypt paas umbraco
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/2017-4-30-implementing-ssl-via-lets-encrypt-on-an-umbraco-azure-web-app/lets-encrypt-umbraco.jpg)

@@ -2,6 +2,7 @@
 layout: post
 title: Achieving Enterprise Scale with Azure Functions
 redirect_from: "/blog/2016/11/achieving-enterprise-scale-with-azure-functions/"
+tags: azure azure-functions
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/2016-11-12-achieving-enterprise-scale-with-azure-functions/functions.jpg)

@@ -2,6 +2,7 @@
 layout: post
 title: Creating a scalable web store order fulfillment app powered by Azure
 redirect_from: "/blog/2016/09/creating-a-scalable-web-store-order-fulfillment-app-powered-by-azure/"
+tags: azure azure-webjobs
 ---
 
 Modern technology as we know it has become analogous to automation, and its distance from the consumer is decreasing. What was once reserved for production lines and the like has quickly expanded to handle everyday transactional workloads. I recently had such a challenge from a client wanting to decrease the time and effort to notify their warehouse of completed orders on their Shopify eCommerce platform.

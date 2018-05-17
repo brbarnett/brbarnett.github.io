@@ -2,6 +2,7 @@
 layout: post
 title: Creating a simple reverse proxy for Docker Swarm
 redirect_from: "/blog/2018/05/creating-a-simple-reverse-proxy-for-docker-swarm/"
+tags: docker docker-swarm nginx
 ---
 
 In a microservice architecture, it's common to split an API into multiple, independently-deployable applications. While technically the services that run in front of the application containers can expose themselves directly to the internet via ports, it's best practice to serve traffic traffic from a cluster over ports 80/443 and route internally via DNS. 

@@ -2,6 +2,7 @@
 layout: post
 title: Source control, development and deployment of Azure Functions using Visual Studio
 redirect_from: "/blog/2016/11/source-control-development-and-deployment-of-azure-functions-using-visual-studio/"
+tags: azure azure-functions deployment
 ---
 
 In my last post on [Achieving Enterprise Scale with Azure Functions](/achieving-enterprise-scale-with-azure-functions/), I gave a high-level overview why and when to use Azure Functions and some basics around how they work. As a continuation, I'd like to dive a little deeper and share some things I've learned around development process from within Visual Studio. Throughout this post, I will be referencing an [example implementation I created on GitHub](https://github.com/brbarnett/AzureFunctions-OrderFulfillment) if you want to follow along.

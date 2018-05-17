@@ -2,6 +2,7 @@
 layout: post
 title: Reference architecture&colon; Angular 4 and Web API on .NET Core 2.0 Preview 1 with Azure AD authentication
 redirect_from: "/blog/2017/06/reference-architecture-angular-4-and-web-api-on-net-core-20-preview-1-with-azure-ad-authentication/"
+tags: angular azure azure-ad spa dotnet-core
 ---
 
 The more time I spend in the tech community and market these days, the more it has become clear that the appetite for newer, more cutting-edge technologies has gone up. Lately, the new kids on the block that we're tending to build more apps in right now are .NET Core 2.0 and Angular 4, and since we typically build internal applications, I'm seeing Azure AD used a lot for authentication. Since I am seeing this type of application so often, I thought it would be a good idea to build a reference architecture to tie it all together as a quickstart.

@@ -2,6 +2,7 @@
 layout: post
 title: Windows Universal App Series - Creating a Windows Universal App with Prism 5.0 & SQLite for Offline Persistence
 redirect_from: "/blog/2015/03/windows-universal-app-series-creating-a-windows-universal-app-with-prism-50-sqlite-for-offline-persistence/"
+tags: windows-universal-apps
 ---
 
 ### Introduction

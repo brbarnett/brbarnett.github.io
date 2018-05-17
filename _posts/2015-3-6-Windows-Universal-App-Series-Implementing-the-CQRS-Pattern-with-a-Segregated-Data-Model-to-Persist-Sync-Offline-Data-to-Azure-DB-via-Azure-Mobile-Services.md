@@ -2,6 +2,7 @@
 layout: post
 title: Windows Universal App Series – Implementing the CQRS Pattern with a Segregated Data Model to Persist & Sync Offline Data to Azure DB via Azure Mobile Services
 redirect_from: "/blog/2015/03/windows-universal-app-series-implementing-the-cqrs-pattern-with-a-segregated-data-model-to-persist-sync-offline-data-to-azure-db-via-azure-mobile-services/"
+tags: windows-universal-apps
 ---
 
 ### Introduction

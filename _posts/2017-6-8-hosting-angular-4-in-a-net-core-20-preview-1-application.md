@@ -2,6 +2,7 @@
 layout: post
 title: Hosting Angular 4 in a .NET Core 2.0 Preview 1 application
 redirect_from: "/blog/2017/06/hosting-angular-4-in-a-net-core-20-preview-1-application/"
+tags: dotnet-core angular spa
 ---
 
 For reasons I'll detail in a later post, I prefer to host my SPA and API applications separately. Combine that with the fact that I prefer to stay on the Microsoft stack and it raises the question: what is the best hosting environment for my Angular (or any SPA) application?

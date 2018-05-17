@@ -2,6 +2,7 @@
 layout: post
 title: Running ASP.NET 4.6 web apps on both Windows and macOS
 redirect_from: "/blog/2017/08/running-aspnet-46-web-apps-on-both-windows-and-macos/"
+tags: dotnet mac vs-2017
 ---
 
 The .NET world is hot on .NET Core right now, and why not? As the next iteration of the framework, it also allows developers more freedom to use their device and hosting platform of choice. While I use a PC at work, I have a Mac at home and love the idea of collaborating on projects from either device. .NET Core is the natural, easy way to do that.

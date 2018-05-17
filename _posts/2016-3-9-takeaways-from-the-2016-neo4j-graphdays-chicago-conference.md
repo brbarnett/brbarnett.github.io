@@ -2,6 +2,7 @@
 layout: post
 title: Takeaways from the 2016 Neo4j GraphDays&colon; Chicago Conference
 redirect_from: "/blog/2016/03/takeaways-from-the-2016-neo4j-graphdays-chicago-conference/"
+tags: graph-databases neo4j
 ---
 
 As a developer, my favorite part of my job is that I get (and am encouraged) to play around with all kinds of new technologies to test for instances where we could add a new tool to Rightpoint’s ever-expanding toolbox. One of my latest finds is called Neo4j, an industry leader in the Graph Database space. While technically the product has been around for nine years, it seems that they’re just starting to become broadly relevant within the mainstream technology market.

@@ -2,6 +2,7 @@
 layout: post
 title: Windows Universal App Series - Extending XAML Controls to Bind with Prism 5.0
 redirect_from: "/blog/2015/03/windows-universal-app-series-extending-xaml-controls-to-bind-with-prism-50/"
+tags: windows-universal-apps
 ---
 
 ### Introduction
