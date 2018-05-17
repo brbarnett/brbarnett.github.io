@@ -14,7 +14,7 @@ This is a really interesting use case for offline synchronization capabilities, 
 
 Previous posts in this series:
 
-[Windows Universal App Series – Creating a Windows Universal App with Prism 5.0 & SQLite for Offline Persistence]([blog/2015/03/windows-universal-app-series-creating-a-windows-universal-app-with-prism-50-sqlite-for-offline-persistence/)
+[Windows Universal App Series – Creating a Windows Universal App with Prism 5.0 & SQLite for Offline Persistence]({{ site.baseurl }}/blog/2015/03/windows-universal-app-series-creating-a-windows-universal-app-with-prism-50-sqlite-for-offline-persistence/)
 
 ### Setting up the DB Context to Build Out your Data Schema
 As a prerequisite, please complete the [Get started with Mobile Services](http://azure.microsoft.com/en-us/documentation/articles/mobile-services-dotnet-backend-windows-store-dotnet-get-started/) tutorial.
