@@ -7,7 +7,7 @@ tags: dotnet-core configuration
 
 I'm doing some modernizing of legacy apps and decided to use it as an opportunity to play with some new technologies - in this case, we're talking about .NET Core 2.0 Preview 1. While building a reference architecture to talk about on Github, I ran into a snag while trying to figure out how to hide my Azure AD credentials. I want to include a config section, but don't want to commit it with the rest of my appsettings.json file.
 
-Reference Github repository: https://github.com/brbarnett/dot-net-core-spa
+Reference Github repository: [https://github.com/brbarnett/dot-net-core-spa](https://github.com/brbarnett/dot-net-core-spa)
 
 When I created my new application, the Program.cs file contained a minimal web host configuration:
 
