@@ -12,7 +12,7 @@ To perform ingress on a Kubernetes cluster, you must deploy both an Ingress reso
 Here's the repository I've been working from for reference and further instructions: [https://github.com/brbarnett/much-todo-about-containers](https://github.com/brbarnett/much-todo-about-containers)
 
 ### Ingress resource
-Simply, the [Ingress resource](https://kubernetes.io/docs/concepts/services-networking/ingress/#the-ingress-resource) in Kubernetes is a configuration abstraction of how traffic should be directed within a Kubernetes cluster. Its job is to provide a way to version and deploy those rules from source control without getting into the details of - for example - `nginx.conf` that I did in a [previous post]({{ site.baseurl }}/creating-a-simple-reverse-proxy-for-docker-swarm/). In fact, keep that in mind because what we are setting up is actually similar.
+Simply, the [Ingress resource](https://kubernetes.io/docs/concepts/services-networking/ingress/#the-ingress-resource) in Kubernetes is a configuration abstraction of how traffic should be directed within a Kubernetes cluster. Its job is to provide a way to version and deploy those rules from source control without getting into the details of - for example - `nginx.conf` that I did in a [previous post]({{ site.baseurl }}/blog/2018/05/creating-a-simple-reverse-proxy-for-docker-swarm/). In fact, keep that in mind because what we are setting up is actually similar.
 
 Here's an example of an Ingress resource definition:
 
