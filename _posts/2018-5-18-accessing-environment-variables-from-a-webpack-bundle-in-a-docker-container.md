@@ -14,8 +14,9 @@ But you can fix that. It's not the sexiest solution by any means, but I found in
 Let's start by creating a `config.sh` script that gets copied into image at build:
 ```
 #!/bin/bash
-echo "window.appConfig = { API_URL: '${!API_URL}'} " >> config.js
-nginx -g "daemon off;"
+echo "window.appConfig = { API_URL: '${API_URL}'} " >> config.js
+cat config.js
+apachectl -D FOREGROUND
 ```
 
 _**Warning**: if you wrote this script with Windows, you need to change the EOL characters to Unix format. Remember that these commands execute on Linux, and your Windows characters will throw cryptic errors._
@@ -24,8 +25,8 @@ The job of the config script is to create a JavaScript file that outputs a confi
 
 On top of copying the `config.sh` script into the image, you will also need to set permissions and execute in your `Dockerfile`:
 ```
+COPY --from=build-env /src/config.sh .
 RUN ["chmod", "+x", "./config.sh"]
-
 CMD ["/usr/local/apache2/htdocs/config.sh"]
 ```
 
