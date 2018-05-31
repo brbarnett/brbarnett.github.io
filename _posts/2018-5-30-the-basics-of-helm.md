@@ -47,19 +47,26 @@ helm install ./helm-charts/src/todo-app \
 What's with the `--set web.replicas=6`? Helm templates are not exactly Kubernetes resource manifests, but rather templates for them. It allows you to pass in configurable variables that dynamically render in final manifests prior to release. In this case, I have a value in my `values.yaml` file that the `--set` keyword is overriding.
 
 ### Upgrading a release
+As you upgrade your container images, rolling out changes atomically is easy - simply run the following `upgrade` command:
 
 ```
 helm upgrade todo-release ./helm-charts/src/todo-app
 ```
+The application and its dependencies you have deployed will upgrade atomically to the latest version based on your deployment strategy.
 
 ### Rolling back a release
+Now for some real power. Let's say that a change made in this upgrade degraded system performance. No problem: roll back the upgrade with a simple `rollback` command:
 
 ```
-
-
+# get revision number from release history
 helm history todo-release
 
+# roll back to revision number 1
 helm rollback todo-release 1
 ```
 
-[ image of history ]
+Here's what the release history looks like after rollback:
+
+![_config.yml]({{ site.baseurl }}/images/2018-5-30-the-basics-of-helm/helm-release-history.jpg)
+
+This is obviously a very simple example - I'll do a future post on deploying Kubernetes resources and Helm charts using VSTS Build & Release.
