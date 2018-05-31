@@ -5,7 +5,7 @@ tags: helm kubernetes docker
 ---
 
 ### What is Helm?
-Helm calls itself the package manager for Kubernetes. That's true, but I think I can help simplify: Helm provides a way to package multiple Kubernetes resource templates that can be released, upgraded and rolled back together. It allows you to define a much larger atomic deployment unit as a collection of multiple resources and dependency that make sense to version and deploy together.
+Helm calls itself the package manager for Kubernetes. That's true, but I think I can help simplify: Helm provides a way to package multiple Kubernetes resource templates that can be released, upgraded and rolled back together. It allows you to define a much larger and cohesive atomic deployment unit as a collection of multiple resources and dependencies.
 
 ### Packaging Kubernetes resources with Helm
 Helm requires a specific filesystem structure in order to work correctly. As of the time of writing, the following is the structure of a Helm chart:
@@ -27,7 +27,7 @@ Let's use a true example - this post is based on the following GitHub repository
 
 There is a collection of Kubernetes resource manifest files in the `./templates` directory that will all get deployed at the same time as a release. 
 
-Before we get started, make sure `kubectl` is pointing at the correct Kubernetes instance with `kubectl cluster-info`, then initialize Helm:
+Before we get started, make sure `kubectl` is pointing at the correct Kubernetes instance with `kubectl config current-context`, then initialize Helm:
 
 ```
 helm init --upgrade --service-account default   # required, otherwise you get a 'no available release name' error
@@ -44,7 +44,7 @@ helm install ./helm-charts/src/todo-app \
     --set web.replicas=6
 ```
 
-What's with the `--set web.replicas=6`? Helm templates are not exactly Kubernetes resource manifests, but rather templates for them. It allows you to pass in configurable variables that dynamically render in final manifests prior to release. In this case, I have a value in my #### TODO ####
+What's with the `--set web.replicas=6`? Helm templates are not exactly Kubernetes resource manifests, but rather templates for them. It allows you to pass in configurable variables that dynamically render in final manifests prior to release. In this case, I have a value in my `values.yaml` file that the `--set` keyword is overriding.
 
 ### Upgrading a release
 
