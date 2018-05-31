@@ -5,7 +5,7 @@ tags: helm kubernetes docker
 ---
 
 ### What is Helm?
-Helm calls itself the package manager for Kubernetes. That's true, but I think I can help simplify: Helm provides a way to package multiple Kubernetes resource templates that can be released, upgraded and rolled back together. It allows you to define a much larger and cohesive atomic deployment unit as a collection of multiple resources and dependencies.
+[Helm](https://helm.sh/) calls itself the package manager for Kubernetes. That's true, but I think I can help simplify: Helm provides a way to package multiple Kubernetes resource templates that can be released, upgraded and rolled back together. It allows you to define a much larger and cohesive atomic deployment unit as a collection of multiple resources and dependencies.
 
 ### Packaging Kubernetes resources with Helm
 Helm requires a specific filesystem structure in order to work correctly. As of the time of writing, the following is the structure of a Helm chart:
