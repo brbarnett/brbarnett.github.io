@@ -22,7 +22,7 @@ The solution for us was to create a custom Azure role with minimal access. This 
 ```
 {
    "Name":"AKS Cluster Configuration Reader",
-   "Id":"{{ create a unique guid }}",
+   "Id":"{ create a unique guid }",
    "IsCustom":true,
    "Description":"Can get AKS configuration.",
    "Actions":[
@@ -36,7 +36,7 @@ The solution for us was to create a custom Azure role with minimal access. This 
    "NotDataActions":[
    ],
    "AssignableScopes":[
-      "/subscriptions/{{ your subscription ID }}"
+      "/subscriptions/{ your subscription ID }"
    ]
 }
 ```
