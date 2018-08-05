@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Securely enabling az aks get-credentials
-tags: azure aks kubernetes
+tags: azure aks kubernetes rbac
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/2018-8-4-securely-enabling-az-aks-get-credentials/aks.jpg)
