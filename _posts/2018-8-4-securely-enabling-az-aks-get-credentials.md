@@ -8,7 +8,7 @@ tags: azure aks kubernetes
 
 Over the past months, I have been digging into Kubernetes pretty hard. Since most of my clients are using Azure, AKS is currently the managed Kubernetes service of choice in my world. Since it has gone GA in June and now supports RBAC, I have been looking to provision a Kubernetes playground for the broader organization. 
 
-Following the Azure AD integration docs has been a breeze, but it left me one step short when it comes to using the Azure CLI to get an AKS cluster credentials. In order for `az aks get-credentials` to succeed right now on AKS, the user has to have at least `Contributor` access to the cluster. The `Reader` role yields the following error message:
+Following the [Azure AD integration docs](https://docs.microsoft.com/en-us/azure/aks/aad-integration) has been a breeze, but it left me one step short when it comes to using the Azure CLI to get an AKS cluster credentials. In order for `az aks get-credentials` to succeed right now on AKS, the user has to have at least `Contributor` access to the cluster. The `Reader` role yields the following error message:
 
 `The client '[janedoe@domain.com]janedoe@domain.com' with object id '00000000-0000-0000-0000-000000000000' does not have authorization to perform action 'Microsoft.ContainerService/managedClusters/accessProfiles/listCredential/action' over scope '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Resource-Group-Name/providers/Microsoft.ContainerService/managedClusters/AKS-Cluster-Name/accessProfiles/clusterUser'.`
 
