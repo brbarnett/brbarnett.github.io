@@ -19,7 +19,7 @@ There is nothing special about the [App Service Plan deployment](https://gist.gi
 They key to making this work is within the [Web App resource definition](https://gist.github.com/brbarnett/7cacd4a30bed946e9ad681c261765fbd#file-deploy-json-L52-L87), specifically the `siteConfig` values. You may have seen other posts add an additional `siteConfig` value of `"linuxFxValue": "DOCKER|<image-name>:<tag>"`, which only works for ARM template deployment. **Note**: if you are going to use [Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/) (as I am in this post), _do not set this value_ as it will get overwritten every time you deploy your ARM template. Our Release will override this value.
 
 ## Continuous delivery
-Since we're using containers, the build definitions are fairly simple since it's all defined within our `Dockerfile`. I have included my YAML [CI](https://gist.github.com/brbarnett/7cacd4a30bed946e9ad681c261765fbd#file-azure-pipelines-ci-yaml) and [CD](https://gist.github.com/brbarnett/7cacd4a30bed946e9ad681c261765fbd#file-azure-pipelines-cd-yaml) build definitions in the Gist for reference.
+Since we're using containers, the build definitions are fairly simple because the process steps are defined within our `Dockerfile`. I have included my YAML [CI](https://gist.github.com/brbarnett/7cacd4a30bed946e9ad681c261765fbd#file-azure-pipelines-ci-yaml) and [CD](https://gist.github.com/brbarnett/7cacd4a30bed946e9ad681c261765fbd#file-azure-pipelines-cd-yaml) build definitions in the Gist for reference.
 
 The delivery process looks like this:
 1. Developer makes changes in a feature branch.
