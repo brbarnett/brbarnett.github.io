@@ -23,10 +23,10 @@ Since we're using containers, the build definitions are fairly simple because th
 
 The delivery process looks like this:
 1. Developer makes changes in a feature branch.
-2. Developer creates a Pull Request. CI Build is automatically queued, which is required for merge.
+2. Developer creates a Pull Request. CI Build is automatically queued, which is required for merge. Note: set this up as a branch policy, not a trigger in the CI Build definition.
 3. Lead merges Pull Request. CD Build is automatically queued.
-4. CD Build pushes container image automatically to our [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) (ACR).
-5. Release is triggered automatically on new ACR push. This is important, because a typical release would trigger on CD build completion. We made this decision to keep our options open later -- for example, this allows us to make minimal changes if we move to Kubernetes with Spinnaker instead of Pipelines.
+4. CD Build pushes container image automatically to our [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) (ACR) instance.
+5. Release is triggered automatically on new ACR push. This is important, because a typical release would trigger on CD Build completion. We made this decision to keep our options open later - for example, this allows us to make minimal changes to the pipeline if we move to Kubernetes with Spinnaker instead of Pipelines.
 6. Dev environment Web App underlying image is updated by Release.
 
 The Release only has a single `Azure App Service Deploy` task. To configure it to deploy containers, switch the App Type to Linux Web App, which then defaults to an image source of Container Registry.
