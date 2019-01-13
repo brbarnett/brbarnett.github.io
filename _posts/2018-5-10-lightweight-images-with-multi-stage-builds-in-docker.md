@@ -9,6 +9,8 @@ Size matters. When you're shipping code in containers, it's important to remembe
 
 It's a best practice to use containers to resolve dependencies (dotnet restore, npm install) and build (dotnet build, webpack) code because it ensures a consistent environment where the team's specific version of Node.js becomes less important. Unfortunately, this also requires that the containers in which we build code must also have build dependencies installed, such as the .NET Core SDK or Node.js. Since you don't need all those dependencies in production, how can you slim down your images?
 
+<!--more-->
+
 ### Multi-stage builds
 Multi-stage builds allow you to restore and build code in a container with a more robust base image, but then copy the resulting app to a slimmer image that only has the bare minimum. Here's an example Dockerfile:
 

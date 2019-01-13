@@ -6,6 +6,8 @@ tags: webpack docker
 
 So I have this React application bundled with webpack and containerized in an image based on an Apache httpd base image. I want the app to make synchronous HTTP requests, but I don't want the container at build time to be aware of where it's making that request - this should be a configuration detail rather than implementation.
 
+<!--more-->
+
 My first instinct was to pass environment variables into the container at runtime. While this didn't end up being the wrong direction, it's not that simple because webpack only picks up environment variables at build time, not run time. As that bundle gets served, it has no awareness of the container's environment variables.
 
 But you can work around that. It's not the sexiest solution by any means, but I found in my case that it was as simple as auto-generating a `config.js` file at container startup time, where I can output the relevant environment variables as a JSON object.

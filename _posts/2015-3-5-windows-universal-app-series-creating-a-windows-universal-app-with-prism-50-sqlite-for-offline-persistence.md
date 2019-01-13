@@ -8,6 +8,8 @@ tags: windows-universal-apps
 ### Introduction
 I recently had the pleasure of working with a client who wanted to upgrade the platform of their Windows Mobile 6.5 Line of Business, inventory management app to something a bit more recent and cutting-edge. Their goal was to modernize their devices (the old device was a Motorola ES400), and update their software to something significantly more maintainable, scalable and extensible.
 
+<!--more-->
+
 Since the Windows Mobile OS, Microsoft has gone through a few iterations of 7.X and 8.0 releases to their mobile operating systems. Those operating systems – from a development perspective – were specific to the mobile platform (as opposed to desktop or tablet), so developers created projects and used APIs that were targeted at working only with mobile devices. Now, with the advent of Windows 8.1 (and the impending release of Windows 10 later this year), there have been far more advancements that make Windows apps much more device-agnostic: enter, the Windows Universal App. These are apps that are built on the fundamentals of the MVVM pattern, targeting a cohesive and shared set of Windows APIs between desktop, tablet and phone alike while allowing developers to present content differently between platform-specific projects in the same solution. It is for this reason that we chose to build the application as a Universal App.
 
 ### The Windows Universal Apps Architecture

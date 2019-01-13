@@ -9,6 +9,8 @@ As a developer, my favorite part of my job is that I get (and am encouraged) to 
 
 It has been a while since I started tinkering with Neo4j, and today I got the opportunity to attend a Neo4j-sponsored Graph Database conference in Chicago.  I would like to share a few learnings for those who want a TL;D[Attend] of the action. Firstly, let’s dive into a bit of quick context.
 
+<!--more-->
+
 ### What is a Graph Database?
 A Graph Database is essentially a NoSQL database with the addition of relationships as first-class citizens. A Graph is made up of Nodes and Relationships, which are entities that are described by Labels (which can be neatly compared to Types in other contexts) and can each contain Properties. Think of it this way:
 

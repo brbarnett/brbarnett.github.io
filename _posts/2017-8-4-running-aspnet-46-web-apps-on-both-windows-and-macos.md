@@ -7,6 +7,8 @@ tags: dotnet mac vs-2017
 
 The .NET world is hot on .NET Core right now, and why not? As the next iteration of the framework, it also allows developers more freedom to use their device and hosting platform of choice. While I use a PC at work, I have a Mac at home and love the idea of collaborating on projects from either device. .NET Core is the natural, easy way to do that.
 
+<!--more-->
+
 But wait - what about legacy applications? Not everyone can upgrade yet, given the expense of refactoring an entire application. This is especially true if you don't expect ROI from a migration.  Good news: [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) has a solution for you. The debugger uses Mono now, which means you can fire up a framework 4.6 application and debug as if you were on your Windows machine. There is a bit of a snag when creating a project on a PC first, however.
 
 To test it out, I created a [GitHub repository](https://github.com/brbarnett/mac-test) and added a new 4.6 web application from both my PC and Mac to compare them. When I pulled the PC project to my Mac, I got a runtime error: `Could not find file "(project-path)/bin\roslyn\csc.exe"`

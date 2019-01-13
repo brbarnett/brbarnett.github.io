@@ -7,6 +7,8 @@ tags: kubernetes ingress nginx azure-aks azure
 
 In a [previous post]({{ site.baseurl }}/blog/2018/05/creating-a-simple-reverse-proxy-for-docker-swarm/), I showed you how to create a reverse proxy container image for use in a Docker Swarm. If you're using Kubernetes, you will still use a similar service for ingress (in that you use something like an nginx reverse proxy) but the nomenclature and how it glues together is a bit different. I'll go into some specifics with some example resources and how they work in [Azure AKS](https://docs.microsoft.com/en-us/azure/aks/).
 
+<!--more-->
+
 To perform ingress on a Kubernetes cluster, you must deploy both an Ingress resource and an ingress controller. The reason I'm writing this post is because when I was getting started, I had a difficult time understanding why ingress requires both resources. The [Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/ingress/) on ingress goes into just about every detail except for how they interact with each other. Time to dive deeper - I'll help you understand how this works.
 
 Here's the repository I've been working from for reference and further instructions: [https://github.com/brbarnett/much-todo-about-containers](https://github.com/brbarnett/much-todo-about-containers)

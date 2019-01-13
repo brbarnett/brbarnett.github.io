@@ -7,6 +7,8 @@ tags: docker docker-swarm nginx
 
 In a microservice architecture, it's common to split an API into multiple, independently-deployable applications. While technically the services that run in front of the application containers can expose themselves directly to the internet via ports, it's best practice to serve traffic traffic from a cluster over ports 80/443 and route internally via DNS. 
 
+<!--more-->
+
 To do that, we'll use an nginx service to act as a reverse proxy. It will look something like this:
 
 ![_config.yml]({{ site.baseurl }}/images/2018-5-11-creating-a-simple-reverse-proxy-for-docker-swarm/nginx-reverse-proxy.jpg)

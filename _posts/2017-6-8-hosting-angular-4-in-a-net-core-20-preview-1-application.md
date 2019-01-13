@@ -9,6 +9,8 @@ For reasons I'll detail in a later post, I prefer to host my SPA and API applica
 
 If you're from the JavaScript/Node side of town, the answer is easy: Node is a great because it's lightweight and configuration is very simple. Thankfully these days Microsoft has a real competitor in .NET Core -- you get all the benefits of a serious application without the bloat that comes with a ASP.NET 4.x application. So now if I've bought in and decided on .NET Core, how do I actually serve my application? Let's do a little bit of configuration to use the /wwwroot directory that comes with .NET Core applications.
 
+<!--more-->
+
 Reference Github repository: https://github.com/brbarnett/dot-net-core-spa
 
 Using the [Angular CLI](https://github.com/angular/angular-cli) makes building Angular apps dead simple. When using the CLI, though, there's no great way to create both the Web app (.NET Core) and Angular app in the same directory. My process is as follows:
