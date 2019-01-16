@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using Azure Pipelines to publish NuGet packages to a private Arifacts feed
+title: Using Azure Pipelines to publish NuGet packages to a private Artifacts feed
 tags: azure azure-devops pipelines nuget artifacts
 ---
 
