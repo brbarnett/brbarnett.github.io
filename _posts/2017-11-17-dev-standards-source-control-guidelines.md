@@ -9,6 +9,8 @@ As technology companies continue to grow and project teams expand to deliver lar
 
 These are guidelines that serve to document basic process around how I deliver all technical phases of our projects. While this process serves as the default, there are potentially reasons to change based on specific needs. If you do not follow this process, please be prepared to defend your decision(s) with your leadership.
 
+<!--more-->
+
 Here's what works for us:
 
 * **You should rarely change locations without pushing code** commits to a remote source control repository. You never know when your development machine will be unavailable or stop working. This does happen (I can give you examples) and you will lose work if you are not backed up.

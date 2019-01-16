@@ -7,6 +7,8 @@ tags: angular azure azure-ad spa dotnet-core
 
 The more time I spend in the tech community and market these days, the more it has become clear that the appetite for newer, more cutting-edge technologies has gone up. Lately, the new kids on the block that we're tending to build more apps in right now are .NET Core 2.0 and Angular 4, and since we typically build internal applications, I'm seeing Azure AD used a lot for authentication. Since I am seeing this type of application so often, I thought it would be a good idea to build a reference architecture to tie it all together as a quickstart.
 
+<!--more-->
+
 Reference Github repository: https://github.com/brbarnett/dot-net-core-spa (read the solution readme for setup/deployment details)
 
 I am assuming you have read my [post on hosting Angular 4 apps in .NET Core]({{ site.baseurl }}/blog/2017/06/hosting-angular-4-in-a-net-core-20-preview-1-application/): 

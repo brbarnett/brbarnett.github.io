@@ -8,6 +8,8 @@ tags: windows-universal-apps
 ### Introduction
 While I was completing a project for a client of mine, I was working with a ListView that we wanted to create interactions on the screen, such as displaying details of the selected item in bound controls. We were using Prism, however, which naturally (and very deliberately) blocks the developer from making concrete references to Views from ViewModels. The issue that creates is that you cannot subscribe to events generated from a control like a ListView, which is exactly what we needed to do.
 
+<!--more-->
+
 Previous posts in this series:
 
 [Windows Universal App Series – Creating a Windows Universal App with Prism 5.0 & SQLite for Offline Persistence]({{ site.baseurl }}/blog/2015/03/windows-universal-app-series-creating-a-windows-universal-app-with-prism-50-sqlite-for-offline-persistence/)

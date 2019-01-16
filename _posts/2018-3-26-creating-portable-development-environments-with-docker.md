@@ -7,6 +7,8 @@ tags: docker
 
 The rate of change in software development tools has never been faster, which has allowed developers to continue to demand increased flexibility in how they deliver. Gone are the days of an entire development team sharing consistent hardware (PC vs Mac), and I have seen a massive uptick in once-Windows-only devs moving to MacOS. Enabling this change are the framework giants like Microsoft, who have been moving toward OS-agnostic frameworks - for example, .NET Core running on Windows, MacOS and Linux.
 
+<!--more-->
+
 This flexibility comes with a cost: when your job is to develop and/or maintain multiple projects, you are now required to manage specific OS and framework versions in order to promote consistency within the broader development team. Can you imagine having to upgrade/downgrade Node or dotnet versions between projects?
 
 Enter: [Docker](https://www.docker.com/). Docker allows you to manage OS and framework versions within images, and those images run in containers that are completely independent of each other and the host OS. What that means for you is that you can run a Node 6.x container next to a Node 8.10.0 (current LTS) without needing to even install Node on your host. I'm going to show you not only how to load your code into containers that support specific frameworks, but also how to connect those containers to your host's file system to allow hot reload -- meaning, whenever you update the code on your file system, the container automatically restarts with the latest version. How cool is that??

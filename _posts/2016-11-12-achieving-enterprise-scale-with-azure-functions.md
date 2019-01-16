@@ -11,6 +11,8 @@ A few months ago, I posted about creating a decoupled, scalable web store order 
 
 But what about when that's not enough? In enterprise solutions with enough throughput, we need a way to keep up with demand. In this post, I will talk about the basics of Azure Functions and will follow up with a subsequent post that talks more about development, source control and deployment options.
 
+<!--more-->
+
 ### Microservices at enterprise scale with Azure Functions
 Azure Functions are the next iteration of the WebJobs SDK -- in fact, both of them run on top of that SDK. They are represented in the Azure portal as a Functions App, which is a component that comes with its own UX, built to allow creating, developing, integrating and monitoring functions directly through the portal. The UX is a quick way to get started as it requires very little effort to bind to components within your existing resource group(s).
 

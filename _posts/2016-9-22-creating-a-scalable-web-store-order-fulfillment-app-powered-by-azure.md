@@ -7,6 +7,8 @@ tags: azure azure-webjobs
 
 Modern technology as we know it has become analogous to automation, and its distance from the consumer is decreasing. What was once reserved for production lines and the like has quickly expanded to handle everyday transactional workloads. I recently had such a challenge from a client wanting to decrease the time and effort to notify their warehouse of completed orders on their Shopify eCommerce platform.
 
+<!--more-->
+
 Here are the basics:
 
 * Shopify has a built-in webhook that sends a POST request to a pre-configured URL on an "Order Payment" event that contains all customer/SKU data required by the client for storage and warehouse for fulfillment.

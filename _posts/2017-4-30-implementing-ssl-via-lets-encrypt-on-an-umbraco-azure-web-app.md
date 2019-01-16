@@ -10,6 +10,8 @@ tags: azure tls lets-encrypt paas umbraco
 ### Why SSL?
 I'm a big believer in SSL, especially lately - privacy on the internet has never been such a divisive topic. Like most people who build and own a blog site like this, I find it hard to stomach spending a few hundred bucks a year to secure a site that doesn't have any forms or collect any kind of information from users. When it comes down to it, though, I love seeing the big green padlock in Chrome from SSL sites, and I'll also take the Google [SEO boost](https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html) to boot.
 
+<!--more-->
+
 ### Let's Encrypt!
 This is where [Let's Encrypt](https://letsencrypt.org/) comes in: it's a free, open source certificate authority that allows people like me to implement SSL on my blog site without a hefty bill from Comodo or one of the giants. A typical implementation involves installing Let's Encrypt on a VM and issuing a certificate request from there, but what about Azure PaaS? I don't have control over that by design. Thankfully, there's a site extension for that, and I'm a huge fan of Troy Hunt's blog post / instruction manual on how to get that set up: https://www.troyhunt.com/everything-you-need-to-know-about-loading-a-free-lets-encrypt-certificate-into-an-azure-website/
 

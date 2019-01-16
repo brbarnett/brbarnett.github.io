@@ -8,6 +8,8 @@ tags: azure azure-devops pipelines docker devops
 
 I am currently working on a project where we have elected to use .NET Core and have been asked to allow deployment flexibility. The platform versatility of .NET Core allows us the option to containerize our apps, which is exactly what we're doing. But instead of diving into the deep end of what could eventually become Kubernetes right off the bat, we want to keep things simple. In this case, we've chosen to use [Azure Web Apps for Containers](https://azure.microsoft.com/en-us/services/app-service/containers/). This post walks through our code management process and continuous delivery of infrastructure and containers.
 
+<!--more-->
+
 Please see [this Gist](https://gist.github.com/brbarnett/7cacd4a30bed946e9ad681c261765fbd) for full code references.
 
 ## Code management
