@@ -51,12 +51,12 @@ Note that the CD build is actually creating two packages: `[major].[minor].[buil
 ## Release
 We have set up two release environments, which is how we push prerelease packages for testing and then promote those packages to release.
 
-![_config.yml]({{ site.baseurl }}/images/using-azure-pipelines-to-publish-nuget-packages-to-a-private-artifacts-feed/release.jpg)
+![_config.yml]({{ site.baseurl }}/images/2019-1-16-using-azure-pipelines-to-publish-nuget-packages-to-a-private-artifacts-feed/release.jpg)
 
 Each release only has a single `dotnet push` task that targets our custom Artifacts feed for distribution.
 
 This is the result of the Release process:
 
-![_config.yml]({{ site.baseurl }}/images/using-azure-pipelines-to-publish-nuget-packages-to-a-private-artifacts-feed/artifacts.jpg)
+![_config.yml]({{ site.baseurl }}/images/2019-1-16-using-azure-pipelines-to-publish-nuget-packages-to-a-private-artifacts-feed/artifacts.jpg)
 
 I'll follow up with a subsequent post on how to consume these artifacts from a container build definition.
