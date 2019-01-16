@@ -4,7 +4,7 @@ title: Using Azure Pipelines to publish NuGet packages to a private Arifacts fee
 tags: azure azure-devops pipelines nuget artifacts
 ---
 
-image
+![_config.yml]({{ site.baseurl }}/images/2019-1-16-using-azure-pipelines-to-publish-nuget-packages-to-a-private-artifacts-feed/header.jpg)
 
 My team is building a suite of small ASP.NET Core WebAPI projects for one of our clients - call it dabbling in microservices - and we have applied a few standards (e.g., implementing Swagger, and a `X-Correlation-ID` header) across all of the apps. Instead of repeating the same configuration code many times, we have decided to use [Azure Artifacts](https://azure.microsoft.com/en-us/services/devops/artifacts/) to manage a common NuGet package across all implementations. This post explains how we automated publishing of one of our packages using [Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/).
 
