@@ -4,7 +4,7 @@ title: Accessing Azure Artifacts from a docker container in a Pipelines build
 tags: azure azure-devops pipelines nuget artifacts docker
 ---
 
-![_config.yml]({{ site.baseurl }}/images/2019-1-16-using-azure-pipelines-to-publish-nuget-packages-to-a-private-artifacts-feed/header.jpg)
+![_config.yml]({{ site.baseurl }}/images/2019-1-17-accessing-azure-artifacts-from-a-docker-container-in-a-pipelines-build/header.jpg)
 
 In my [previous post]({{ site.baseurl }}/blog/2019/01/2019-1-16-using-azure-pipelines-to-publish-nuget-packages-to-a-private-artifacts-feed/) I talked about how our team is publishing NuGet packages using Azure Pipelines to a DevOps Artifacts feed. Now it's time to consume those packages. There are plenty of examples on how to connect to a feed in Build, but our case is a bit different because our applications are containerized. The purpose of this post is to share specifically how we authorize access to Artifacts from a docker build context.
 
