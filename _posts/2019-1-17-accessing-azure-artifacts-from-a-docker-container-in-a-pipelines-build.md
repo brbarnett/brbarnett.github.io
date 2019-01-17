@@ -4,7 +4,7 @@ title: Accessing Azure Artifacts from a docker container in a Pipelines build
 tags: azure azure-devops pipelines nuget artifacts docker
 ---
 
-image
+![_config.yml]({{ site.baseurl }}/images/2019-1-16-using-azure-pipelines-to-publish-nuget-packages-to-a-private-artifacts-feed/header.jpg)
 
 In my [previous post]({{ site.baseurl }}/blog/2019/01/2019-1-16-using-azure-pipelines-to-publish-nuget-packages-to-a-private-artifacts-feed/) I talked about how our team is publishing NuGet packages using Azure Pipelines to a DevOps Artifacts feed. Now it's time to consume those packages. There are plenty of examples on how to connect to a feed in Build, but our case is a bit different because our applications are containerized. The purpose of this post is to share specifically how we authorize access to Artifacts from a docker build context.
 
@@ -20,7 +20,7 @@ The docker build context is isolated from Azure DevOps, meaning that it should b
 ## Pipelines variable group
 The next step is to create a group of variables that you can share between all build definitions. I created an Artifacts group and added an `artifactsAccessToken` (this is your Private Access Token) and `artifactsEndpoint` which I got from clicking Connect to Feed from my Artifacts feed.
 
-image
+![_config.yml]({{ site.baseurl }}/images/2019-1-17-accessing-azure-artifacts-from-a-docker-container-in-a-pipelines-build/variable-group.jpg)
 
 ## CI and CD builds
 Go ahead and create your CI and CD builds - feel free to use my files as a template. Note that I am specifically passing in the variables I created in the variable group above using the following method:
@@ -45,5 +45,9 @@ This ensures that the variables get passed to the `Dockerfile` ARGS that we also
 
 **Important: once you create the build in DevOps, you need to click through Variables > Variable groups and click _Link variable group_. This is a security feature.**
 
+![_config.yml]({{ site.baseurl }}/images/2019-1-17-accessing-azure-artifacts-from-a-docker-container-in-a-pipelines-build/link-variable-group.jpg)
+
 ## Dockerfile
 Now that we have builds set up, create a `Dockerfile` that defines how your app is build and run. To use the variables we passed in via Build above, create `ACCESS_TOKEN` and `ARTIFACTS_ENDPOINT` ARGS to accept them. The key changes from a typical `Dockerfile` is that you need to install the [Azure Artifacts Credential Provider](https://github.com/Microsoft/artifacts-credprovider) and then set the `NUGET_CREDENTIALPROVIDER_SESSIONTOKENCACHE_ENABLED` and `VSS_NUGET_EXTERNAL_FEED_ENDPOINTS` environment variables to let it do its job. Also, alter your `dotnet restore` task to use the new feed endpoint.
+
+Now run through the entire process and make sure everything works correctly - if so, you should have a new docker container image ready for deployment!
