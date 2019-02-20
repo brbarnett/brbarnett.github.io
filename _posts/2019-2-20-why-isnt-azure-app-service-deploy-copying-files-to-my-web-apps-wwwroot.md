@@ -22,6 +22,8 @@ These are the new features in `4.*` per the Azure DevOps UI at the time of writi
 - **Run From Package is the preferred deployment method, which makes files in wwwroot folder read-only**
 - [Click here  for more information.](https://github.com/Microsoft/azure-pipelines-tasks/blob/master/Tasks/AzureRmWebAppDeploymentV4/README.md)
 
+Most relevant for us is the _Run From Package_ feature.
+
 ## How does that work?
 When the release task deploys using _Run From Package_, it does a few things:
 
@@ -29,7 +31,7 @@ When the release task deploys using _Run From Package_, it does a few things:
 - Creates a `/data/SitePackages/packagename.txt` file whose contents point to the deployed zip filename.
 - Sets a new Application Setting to the app of `WEBSITE_RUN_FROM_PACKAGE=1`.
 
-The effect of the `WEBSITE_RUN_FROM_PACKAGE` setting is that the `/site/wwwroot/` directory now vitually points to the deployed zip file, not to the actual underlying file system. Try it: download the package zip from `/data/SitePackages/` and compare contents with `/site/wwwroot/` in Kudu. If you extract FTP credentials from the web deploy and access `/site/wwwroot/`, there is a completely different site of files. Here's what I'm seeing from a fresh .NET Core MVC deployment:
+The effect of the `WEBSITE_RUN_FROM_PACKAGE` setting is that the `/site/wwwroot/` directory now vitually points to the deployed zip file, not to the actual underlying file system. Try it: download the package zip from `/data/SitePackages/` and compare contents with `/site/wwwroot/` in Kudu. If you extract FTP credentials from the publish profile and access `/site/wwwroot/`, there is a completely different site of files. Here's what I'm seeing from a fresh .NET Core MVC deployment:
 
 ### Kudu
 ![_config.yml]({{ site.baseurl }}/images/2019-2-20-why-isnt-azure-app-service-deploy-copying-files-to-my-web-apps-wwwroot/kudu-contents.jpg)
@@ -42,12 +44,12 @@ When Microsoft updated the release task, they made a major change to the default
 
 ![_config.yml]({{ site.baseurl }}/images/2019-2-20-why-isnt-azure-app-service-deploy-copying-files-to-my-web-apps-wwwroot/deployment-options.jpg)
 
-When the _Select deployment method_ option is not checked, the task appears to prefer the _Run From Package_ option. Since I want to overlay my deployment files over existing files, the solution for us was to select the option and choose Web Deploy as our deployment method.
+When the _Select deployment method_ option is not checked, the task appears to prefer the _Run From Package_ option. Since I want to overlay my deployment files over existing files, the solution for us was to select the option and choose _Web Deploy_ as our deployment method.
 
 ![_config.yml]({{ site.baseurl }}/images/2019-2-20-why-isnt-azure-app-service-deploy-copying-files-to-my-web-apps-wwwroot/web-deploy.jpg)
 
-Web Deploy matches the previous behavior of the release task in that it overlays my build artifacts without removing any of the destination files.
+_Web Deploy_ matches the previous behavior of the release task in that it overlays my build artifacts without removing any of the destination files:
 
 ![_config.yml]({{ site.baseurl }}/images/2019-2-20-why-isnt-azure-app-service-deploy-copying-files-to-my-web-apps-wwwroot/new-ftp-contents.jpg)
 
-I also noted that when I switched the deployment method to Web Deploy, the release task automatically set the `WEBSITE_RUN_FROM_PACKAGE` setting to `0`, which disabled the `/site/wwwroot/` mismatch we observed.
+I also noted that when I switched the deployment method to _Web Deploy_, the release task automatically set the `WEBSITE_RUN_FROM_PACKAGE` setting to `0`, which disabled the `/site/wwwroot/` mismatch we observed.
