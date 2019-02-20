@@ -6,6 +6,8 @@ tags: azure azure-devops pipelines
 
 I was recently working with a collegue to deploy a Sitecore app to Azure via Pipelines. The release was running successfully, but the deployed files didn't seem to be overlaying the required, pre-loaded Sitecore files. When we viewed `/site/wwwroot` from Kudu, we were seeing only the files from the build artifacts; when we viewed the same directory from FTP, we were seeing only the Sitecore files. What gives?
 
+<!--more-->
+
 ## The cause: Azure App Service Deploy task version
 Sometime over the past few months, the Azure App Service Deploy release task versioned to `4.*`. In that release, the Microsoft team created an auto-detect feature that tries to guess the best method for code deployment to your Web App. In our case, it chose the new preferred method called _Run From Package_, which has a few quirks.
 
