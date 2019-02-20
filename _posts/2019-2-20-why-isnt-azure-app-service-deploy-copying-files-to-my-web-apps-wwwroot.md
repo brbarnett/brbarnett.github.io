@@ -4,6 +4,8 @@ title: Why isn't Azure App Service Deploy copying files to my Web App's wwwroot?
 tags: azure azure-devops pipelines
 ---
 
+![_config.yml]({{ site.baseurl }}/images/2019-2-20-why-isnt-azure-app-service-deploy-copying-files-to-my-web-apps-wwwroot/header.jpg)
+
 I was recently working with a collegue to deploy a Sitecore app to Azure via Pipelines. The release was running successfully, but the deployed files didn't seem to be overlaying the required, pre-loaded Sitecore files. When we viewed `/site/wwwroot` from Kudu, we were seeing only the files from the build artifacts; when we viewed the same directory from FTP, we were seeing only the Sitecore files. What gives?
 
 <!--more-->
