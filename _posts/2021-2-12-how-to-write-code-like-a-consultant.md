@@ -4,7 +4,7 @@ title: How to write code like a consultant
 tags: consulting development
 ---
 
-![_config.yml]({{ site.baseurl }}/images/2021-2-12-how-to-write-code-like-a-consultant/ask-listen-learn.jpg)
+![_config.yml]({{ site.baseurl }}/images/2021-2-12-how-to-write-code-like-a-consultant/ask-listen-learn.png)
 
 As software development continues to grow with the world around us and offers more stable and lucrative opportunities, new developers might wonder how to differentiate themselves in an industry that is fairly homogenous and stereotypical. How do you break the mold and stand out from your peers to find more success and happiness in your career?
 
